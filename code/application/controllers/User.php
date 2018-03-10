@@ -44,13 +44,17 @@ class User extends CI_Controller {
             
             // set array of items in session
             $arraydata = array(
-                    'author_name'  => 'Sajal Soni',
-                    'website'     => 'http://code.tutsplus.com',
-                    'twitter_id' => '@sajalsoni',
-                    'interests' => array('tennis', 'travelling')
+                    'nameofuser'  => $userdetails[0]['name'],
+                    'userid'  => $userdetails[0]['id'],
+                    'rolename'  => $userdetails[0]['rolename'],
+                    'roleid'  => $userdetails[0]['roleid']
+                    #'interests' => array('tennis', 'travelling')
             );
             $this->session->set_userdata($arraydata);
-            $this->load->view('user/dashboard');
+            #print_r($this->session->userdata()['nameofuser']);
+            #$this->load->view('user/dashboard');
+            $this->load->template('user/dashboard',['dataset'=>$userdetails[0]['name']]);
+            
             
         } else {
             // User doesn't exists
