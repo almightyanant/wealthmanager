@@ -53,7 +53,11 @@ class User extends CI_Controller {
             $this->session->set_userdata($arraydata);
             #print_r($this->session->userdata()['nameofuser']);
             #$this->load->view('user/dashboard');
-            $this->load->template('user/dashboard',['dataset'=>$userdetails[0]['name']]);
+            
+            // Redirecting screen on basis of license and user role
+            $view = redirectPages('Dashboard',$form_data['licensekey'],$userdetails[0]['rolename']);
+            
+            $this->load->template($view,['dataset'=>$userdetails[0]['name']]);
             
             
         } else {
