@@ -54,22 +54,7 @@ $this->load->helper('url');
                     <a href="index.html"><i class="icon-display4 position-left"></i> Dashboard</a>
                 </li>
                 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="icon-strategy position-left"></i> Investment <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu width-200">
-                        <li>
-                            <a href="#"><i class="icon-pencil3"></i> Equity</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon-pencil3"></i> Mutual Fund</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon-pencil3"></i> Fixed Income</a>
-                        </li>
-                    </ul>
-                </li>
+                
                 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -106,68 +91,6 @@ $this->load->helper('url');
                         </li>
 
                     </ul>
-                </li>
-                
-                
-                <li class="dropdown mega-menu mega-menu-wide">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="icon-stars position-left"></i> Features <span class="caret"></span>
-                    </a>
-                    <div class="dropdown-menu dropdown-content">
-                        <div class="dropdown-content-body">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <span class="menu-heading underlined">System Configuration</span>
-                                    <ul class="menu-list">
-                                        <li>
-                                            <a href="#"><i class="icon-stack2"></i> Entity/Entity Group</a>                                            
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="icon-stack2"></i> Users</a>                                            
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-3">
-                                    <span class="menu-heading underlined">Masters</span>
-                                    <ul class="menu-list">
-                                        <li>
-                                            <a href="#"><i class="icon-stack2"></i> Stocks Listed/ Un Listed</a>                                            
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="icon-stack2"></i> Mutual Fund Schemes</a>                                            
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="icon-stack2"></i> General Ledger Master</a>                                            
-                                        </li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="col-md-3">
-                                    <span class="menu-heading underlined">Quick Links</span>
-                                    <ul class="menu-list">
-                                        <li>
-                                            <a href="#"><i class="icon-stack2"></i> Single Investment View (Position)</a>                                            
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="icon-stack2"></i> Accounts</a>                                            
-                                        </li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="col-md-3">
-                                    <span class="menu-heading underlined">Others</span>
-                                    <ul class="menu-list">
-                                        <li>
-                                            <a href="#"><i class="icon-stack2"></i> Documents </a>                                            
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="icon-stack2"></i> Back Up</a>                                            
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </li>
                 
                 
@@ -218,6 +141,3 @@ $this->load->helper('url');
         </div>
     </div>
     <!-- Main navbar Ends-->
-                        
-
-               

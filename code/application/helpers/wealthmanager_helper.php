@@ -9,9 +9,6 @@
 function getLicensetye($licensekey){
     
     $ci =& get_instance();
-    //$this->ci->load->database();
-    // connect to secondary database
-    //echo $licensekey;exit;
     $masterdb = $ci->load->database('masterdb', TRUE);
     $masterdb->select('type');
     $sqlquery = $masterdb->get_where('tbl_licensedetails', array('key' => $licensekey))->result_array();
@@ -20,11 +17,35 @@ function getLicensetye($licensekey){
     
 }
 
+//wealth manager view 
 function screenViewWealthManager($screen){
     switch ($screen){
                     
-        case 'Dashboard':
-            $showview = 'user/dashboard';
+        case 'Header':
+            $showview = 'header';
+            break;
+    }
+    
+    return $showview;
+}
+
+//data entry view 
+function screenViewDataEntry($screen){
+    switch ($screen){
+                    
+        case 'Header':
+            $showview = 'header-dataentry';
+            break;
+    }
+    
+    return $showview;
+}
+
+function screenViewApprover($screen){
+    switch ($screen){
+                    
+        case 'Header':
+            $showview = 'header-approver';
             break;
     }
     
@@ -33,30 +54,58 @@ function screenViewWealthManager($screen){
 
 function redirectPages($screen,$licensekey,$rolename){
     
-    //SINGLEVIEWDATAENTRYWITHAPPROVAL
-    //ABCDEF1167
-    //$this->load->template('user/dashboard',['dataset'=>$userdetails[0]['name']]);
+    //License type : SINGLEVIEW, SINGLEVIEWDATAENTRY, SINGLEVIEWDATAENTRYWITHAPPROVAL
+    //Role Type : WEALTHMANAGER, DATAENTRY, APPROVER
     
     $licensetype = getLicensetye($licensekey);
     
-    switch ($licensetype){
+    
+    switch ($rolename){
         
-        // for license system haing single view + data entry + approval
-        case 'SINGLEVIEWDATAENTRYWITHAPPROVAL':
+        case 'WEALTHMANAGER':
             
-            switch ($rolename){
-                
-                //wealth manager view 
-                case 'WEALTHMANAGER':
-                    
+            switch($licensetype){
+            
+                case 'SINGLEVIEWDATAENTRYWITHAPPROVAL':
+                case 'SINGLEVIEW':
+                case 'SINGLEVIEWDATAENTRY':
                     $view = screenViewWealthManager($screen);
-                    
                     break;
-                
             
             }
             
             break;
+        
+        case 'DATAENTRY':
+            
+            switch ($licensetype){
+                case 'SINGLEVIEWDATAENTRYWITHAPPROVAL':
+                case 'SINGLEVIEWDATAENTRY':
+                    $view = screenViewDataEntry($screen);
+                    break;
+                
+                case 'SINGLEVIEW':
+                    show_404();
+                    break;
+            }
+            
+            break;
+        
+        case 'APPROVER':
+            
+            switch ($licensetype){
+                case 'SINGLEVIEWDATAENTRYWITHAPPROVAL':                
+                    $view = screenViewApprover($screen);
+                    break;
+                
+                case 'SINGLEVIEW':
+                case 'SINGLEVIEWDATAENTRY':
+                    show_404();
+                    break;
+            }
+            
+            break;
+                
     }
     
     return $view;

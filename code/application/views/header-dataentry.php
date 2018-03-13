@@ -71,44 +71,6 @@ $this->load->helper('url');
                     </ul>
                 </li>
                 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="icon-make-group position-left"></i> Reports <span class="caret"></span>
-                    </a>
-
-                    <ul class="dropdown-menu width-250">
-                        <li class="dropdown-header">Analysis</li>						
-                        <li>
-                            <a href="#"><i class="icon-task"></i> Valuation</a>                                
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon-task"></i> Returns - IRR</a>                                
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon-task"></i> Allocations</a>                                
-                        </li>
-
-                        <li class="dropdown-header">Accounting</li>
-                        <li>
-                            <a href="#"><i class="icon-cash3"></i> Balance Sheet</a>                            
-                        </li>
-                        
-                        <li>
-                            <a href="#"><i class="icon-cash3"></i> Trial Balance</a>                            
-                        </li>
-                        
-                        <li>
-                            <a href="#"><i class="icon-cash3"></i> Vouchers</a>                            
-                        </li>
-                        
-                        <li>
-                            <a href="#"><i class="icon-cash3"></i> Ledger Entry</a>                            
-                        </li>
-
-                    </ul>
-                </li>
-                
-                
                 <li class="dropdown mega-menu mega-menu-wide">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="icon-stars position-left"></i> Features <span class="caret"></span>
@@ -218,6 +180,3 @@ $this->load->helper('url');
         </div>
     </div>
     <!-- Main navbar Ends-->
-                        
-
-               

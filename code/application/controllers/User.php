@@ -47,7 +47,8 @@ class User extends CI_Controller {
                     'nameofuser'  => $userdetails[0]['name'],
                     'userid'  => $userdetails[0]['id'],
                     'rolename'  => $userdetails[0]['rolename'],
-                    'roleid'  => $userdetails[0]['roleid']
+                    'roleid'  => $userdetails[0]['roleid'],
+                    'licensekey' => $form_data['licensekey']
                     #'interests' => array('tennis', 'travelling')
             );
             $this->session->set_userdata($arraydata);
@@ -55,9 +56,9 @@ class User extends CI_Controller {
             #$this->load->view('user/dashboard');
             
             // Redirecting screen on basis of license and user role
-            $view = redirectPages('Dashboard',$form_data['licensekey'],$userdetails[0]['rolename']);
+            //$view = redirectPages('Dashboard',$form_data['licensekey'],$userdetails[0]['rolename']);
             
-            $this->load->template($view,['dataset'=>$userdetails[0]['name']]);
+            $this->load->template('user/dashboard',['username'=>$userdetails[0]['name']]);
             
             
         } else {
