@@ -58,7 +58,7 @@ class User extends CI_Controller {
             // Redirecting screen on basis of license and user role
             //$view = redirectPages('Dashboard',$form_data['licensekey'],$userdetails[0]['rolename']);
             
-            $this->load->template('user/dashboard',['username'=>$userdetails[0]['name']]);
+            $this->load->template('user/dashboard',['breadcrumb'=>'Dashboard']);
             
             
         } else {

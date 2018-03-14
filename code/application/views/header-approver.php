@@ -124,7 +124,7 @@ $this->load->helper('url');
                 <li class="dropdown dropdown-user">
                     <a class="dropdown-toggle" data-toggle="dropdown">
                         <img src="assets/images/placeholder.jpg" alt="">
-                        <span><?php echo $username; ?></span>
+                        <span><?php echo $_SESSION['nameofuser']; ?></span>
                         <i class="caret"></i>
                     </a>
 
@@ -141,3 +141,26 @@ $this->load->helper('url');
         </div>
     </div>
     <!-- Main navbar Ends-->
+    
+     <!-- Page container -->
+<div class="page-container">
+
+    <!-- Page content -->
+    <div class="page-content">
+
+        <!-- Main content -->
+        <div class="content-wrapper">
+
+            <!-- Page header -->
+            <div class="page-header">
+                <p></p>
+
+                <div class="breadcrumb-line breadcrumb-line-component">
+                    <ul class="breadcrumb">
+                        <li><a href="index.html"><i class="icon-home2 position-left"></i> Home</a></li>
+                        <li class="active"><?php echo $breadcrumb; ?></li>
+                    </ul>
+                    <ul class="breadcrumb-elements">
+			<li><a href="#"><i class="icon-comment-discussion position-left"></i> Support</a></li>
+                    </ul>
+                </div>
