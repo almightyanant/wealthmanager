@@ -26,7 +26,7 @@ class User extends CI_Controller {
         $this->load->view('user/login');
     }
     
-    /* save new bets */
+    /* use login */
     public function user_login()
     {
         $form_data = $this->input->post(); 
@@ -69,5 +69,11 @@ class User extends CI_Controller {
             
         }
         
+    }
+    
+    /* user logout */
+    public function user_logout(){
+        $this->session->sess_destroy();
+        $this->load->view('user/login');
     }
 }
