@@ -1,0 +1,30 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 16, 2018, 12:00:55 AM
+    Author     : anantsingh
+*/
+
+.box-margin {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.footer-wealthmanager {
+    position: inherit;
+    bottom: 30px;
+}
+
+.dataTables_wrapper_wealthmanager {
+    position: relative;
+    clear: both;
+    font-family: "Roboto", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+.dropup .caret::after {
+    content: '\e9c5';
+}

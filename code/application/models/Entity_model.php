@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 /*
- * User Managment Model Class
+ * Entity Managment Model Class
  * 
  * 
  */
@@ -13,5 +13,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Entity_model extends CI_Model {
     
-   
+    
 }

@@ -18,7 +18,9 @@ class Entity extends CI_Controller {
     /* use login */
     public function entity_list()
     {
-        $this->load->template('entity/listview',['breadcrumb'=>'Entity']);
+        $listofentity = $this->mdl_common->getItemsfromTable('tbl_entity');
+        
+        $this->load->template('entity/listview',['breadcrumb'=>'Entity',"entitylist"=> $listofentity]);
         
     }    
     

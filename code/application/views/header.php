@@ -17,6 +17,7 @@ $this->load->helper('url');
 	<link href="<?php echo base_url("assets/css/core.css"); ?>" rel="stylesheet" type="text/css">
 	<link href="<?php echo base_url("assets/css/components.css"); ?>" rel="stylesheet" type="text/css">
         <link href="<?php echo base_url("assets/css/colors.css"); ?>" rel="stylesheet" type="text/css">
+        <link href="<?php echo base_url("assets/css/wealthmanager.css"); ?>" rel="stylesheet" type="text/css">
 	<!-- /global stylesheets -->
 
 	<!-- Core JS files -->
@@ -242,7 +243,7 @@ $this->load->helper('url');
                     </ul>
                 </div>
     
-    
                         
 
+               
                

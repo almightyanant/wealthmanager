@@ -11,12 +11,13 @@ $this->load->helper('url');
 	<title>Wealth Manager - Your Own Wealth Manager</title>
 
 	<!-- Global stylesheets -->
-	<!--<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
 	<link href="<?php echo base_url("assets/css/icons/icomoon/styles.css"); ?>" rel="stylesheet" type="text/css">
 	<link href="<?php echo base_url("assets/css/bootstrap.css"); ?>" rel="stylesheet" type="text/css">
 	<link href="<?php echo base_url("assets/css/core.css"); ?>" rel="stylesheet" type="text/css">
 	<link href="<?php echo base_url("assets/css/components.css"); ?>" rel="stylesheet" type="text/css">
         <link href="<?php echo base_url("assets/css/colors.css"); ?>" rel="stylesheet" type="text/css">
+        <link href="<?php echo base_url("assets/css/wealthmanager.css"); ?>" rel="stylesheet" type="text/css">
 	<!-- /global stylesheets -->
 
 	<!-- Core JS files -->
@@ -203,3 +204,4 @@ $this->load->helper('url');
 			<li><a href="#"><i class="icon-comment-discussion position-left"></i> Support</a></li>
                     </ul>
                 </div>
+                <p></p>
