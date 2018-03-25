@@ -46,7 +46,7 @@ class User extends CI_Controller {
             $arraydata = array(
                     'nameofuser'  => $userdetails[0]['name'],
                     'userid'  => $userdetails[0]['id'],
-                    'rolename'  => $userdetails[0]['rolename'],
+                    'rolename'  => $userdetails[0]['childvaluename'],
                     'roleid'  => $userdetails[0]['roleid'],
                     'licensekey' => $form_data['licensekey']
                     #'interests' => array('tennis', 'travelling')

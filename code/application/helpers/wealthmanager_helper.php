@@ -9,9 +9,10 @@
 function getLicensetye($licensekey){
     
     $ci =& get_instance();
-    $masterdb = $ci->load->database('masterdb', TRUE);
+    $masterdb = $ci->load->database('mysqlmasterdb', TRUE);
+    
     $masterdb->select('type');
-    $sqlquery = $masterdb->get_where('tbl_licensedetails', array('key' => $licensekey))->result_array();
+    $sqlquery = $masterdb->get_where('tbl_licensedetails', array('licensekey' => $licensekey))->result_array();
     
     return $sqlquery[0]['type'];
     

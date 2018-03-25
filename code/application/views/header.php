@@ -28,12 +28,18 @@ $this->load->helper('url');
 	<!-- /core JS files -->
 
 	<!-- Theme JS files -->
+        <script type="text/javascript" src="<?php echo base_url("assets/js/plugins/tables/datatables/datatables.min.js"); ?>"></script>
+        <script type="text/javascript" src="<?php echo base_url("assets/js/plugins/forms/selects/select2.min.js"); ?>"></script>
+        <script type="text/javascript" src="<?php echo base_url("assets/js/pages/datatables_api.js"); ?>"></script>
+
 	<script type="text/javascript" src="<?php echo base_url("assets/js/plugins/forms/styling/uniform.min.js"); ?>"></script>
 	
 	<script type="text/javascript" src="<?php echo base_url("assets/js/core/app.js"); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url("assets/js/pages/login.js"); ?>"></script>
 	<!-- /theme JS files -->
-
+        
+        <script type="text/javascript" src="<?php echo base_url("assets/js/wealthmanager/wealthmanager.js"); ?>"></script>
+        
 </head>
 
 

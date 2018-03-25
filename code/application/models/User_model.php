@@ -25,9 +25,15 @@ class User_model extends CI_Model {
     
     /* get user details */
     public function getUserDetails($username,$password,$licensekey){
-        $sqlquery = $this->db->get_where('tbl_user', array('username' => $username,'password' => $password, 'licensekey' =>$licensekey))->result_array();
         
-        return $sqlquery;
+        $this->db->select('*');
+        $this->db->from('tbl_user');
+        $this->db->join('db_master.tbl_masterdetails', 'tbl_masterdetails.id = tbl_user.roleid');
+        $this->db->where(array('tbl_user.username' => $username,'tbl_user.password' => $password, 'tbl_user.licensekey' =>$licensekey));
+        
+        $query = $this->db->get()->result_array();
+        
+        return $query;
     }
 
 }

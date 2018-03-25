@@ -89,3 +89,9 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
  * Started : 02nd March 2018
  */
 defined('LOGIN_ERROR')      OR define('LOGIN_ERROR', "User doesn't exists for this License. Contact Wealth Manager Team."); // highest automatically-assigned error code
+defined('MASTER_KEY_ENTITYTYPE')  OR define('MASTER_KEY_ENTITYTYPE', "entitytype");
+defined('AUDITLOG_INSERT') OR define('AUDITLOG_INSERT', "Insert");
+defined('AUDITLOG_UPDATE') OR define('AUDITLOG_UPDATE', "Update");
+defined('GLOBAL_FLAG_TRUE') OR define('GLOBAL_FLAG_TRUE', "1");
+defined('GLOBAL_FLAG_FALSE') OR define('GLOBAL_FLAG_FALSE', "0");
+defined('SQLITE3_ERROR')      OR define('SQLITE3_ERROR', "Error in Application. Contact Wealth Manager Team.");
