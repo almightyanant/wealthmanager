@@ -23,7 +23,7 @@ class Mdl_common extends CI_Model {
                 $data = array(
                         'tablename' => $tblname,
                         'rowid' => $rowid,
-                        'created' => GLOBAL_FLAG_TRUE,
+                        'created' => date('Y-m-d H:i:s'),
                         'createdby' => $_SESSION['nameofuser']
                 );
                 
@@ -37,7 +37,7 @@ class Mdl_common extends CI_Model {
                 $data = array(
                         'tablename' => $tblname,
                         'rowid' => $rowid,
-                        'updated' => GLOBAL_FLAG_TRUE,
+                        'updated' => date('Y-m-d H:i:s'),
                         'updatedby' => $_SESSION['nameofuser']
                 );
 

@@ -76,4 +76,28 @@ class User extends CI_Controller {
         $this->session->sess_destroy();
         $this->load->view('user/login');
     }
+    
+    /* user list screen */
+    public function user_list(){
+        $listofuser = $this->user_model->getUserDetails();
+        
+        $this->load->template('user/listview',['breadcrumb'=>'List Users',"userlist"=> $listofuser]);
+    }
+    
+    /* user add screen */
+    public function user_add_screen($flag = '',$data = ''){
+        $getUserRole = $this->mdl_common->getMasterDetails(MASTER_KEY_USERROLE);
+        
+        $this->load->template('user/useraddscreen',['breadcrumb'=>'Add User','userrole'=>$getUserRole,'flag'=>$flag,'data'=>$data]);
+    }
+    
+    /* add user */
+    public function user_add(){
+        $form_data = $this->input->post(); 
+        //echo $form_data['entityname'];exit;
+        $save_flag = $this->mdl_common->saveTableEntries($form_data,'tbl_user');
+        
+        //echo $save_flag;exit; 
+        $this->user_add_screen($save_flag,$form_data['name']);
+    }
 }

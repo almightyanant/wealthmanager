@@ -95,3 +95,5 @@ defined('AUDITLOG_UPDATE') OR define('AUDITLOG_UPDATE', "Update");
 defined('GLOBAL_FLAG_TRUE') OR define('GLOBAL_FLAG_TRUE', "1");
 defined('GLOBAL_FLAG_FALSE') OR define('GLOBAL_FLAG_FALSE', "0");
 defined('SQLITE3_ERROR')      OR define('SQLITE3_ERROR', "Error in Application. Contact Wealth Manager Team.");
+
+defined('MASTER_KEY_USERROLE')  OR define('MASTER_KEY_USERROLE', "userroletype");

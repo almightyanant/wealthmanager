@@ -24,13 +24,14 @@ class User_model extends CI_Model {
     }
     
     /* get user details */
-    public function getUserDetails($username,$password,$licensekey){
+    public function getUserDetails($username = '',$password = '',$licensekey = ''){
         
         $this->db->select('*');
         $this->db->from('tbl_user');
         $this->db->join('db_master.tbl_masterdetails', 'tbl_masterdetails.id = tbl_user.roleid');
-        $this->db->where(array('tbl_user.username' => $username,'tbl_user.password' => $password, 'tbl_user.licensekey' =>$licensekey));
-        
+        if($username != ''){
+            $this->db->where(array('tbl_user.username' => $username,'tbl_user.password' => $password, 'tbl_user.licensekey' =>$licensekey));
+        }
         $query = $this->db->get()->result_array();
         
         return $query;

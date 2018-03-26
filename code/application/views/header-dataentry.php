@@ -92,7 +92,7 @@ $this->load->helper('url');
                                             <a href="<?php echo site_url("entity/entity_list"); ?>"><i class="icon-stack2"></i> Entity/Entity Group</a>                                            
                                         </li>
                                         <li>
-                                            <a href="#"><i class="icon-stack2"></i> Users</a>                                            
+                                            <a href="<?php echo site_url("user/user_list"); ?>"><i class="icon-users"></i> Users</a>                                            
                                         </li>
                                     </ul>
                                 </div>
